@@ -64,7 +64,7 @@ static NSString	*kRecentPatternThumbnail				= @"thumbnail";
 			[pboard setData:[image TIFFRepresentation] forType:NSTIFFPboardType];
 		} // if
 	} else
-		SysBeep(1);
+        AudioServicesPlayAlertSound(kSystemSoundID_UserPreferredAlert);
 } // copy:
 
 // -----
@@ -78,7 +78,7 @@ static NSString	*kRecentPatternThumbnail				= @"thumbnail";
 		[self deleteRecentPictAtIndex:index moveToTrash:YES];
 		[self selectRecentPict:[recentPictsTable selectedRow]];
 	} else
-		SysBeep(1);
+        AudioServicesPlayAlertSound(kSystemSoundID_UserPreferredAlert);
 } // delete:
 
 // -----
@@ -99,7 +99,7 @@ static NSString	*kRecentPatternThumbnail				= @"thumbnail";
 
 				// Try moving the file to the trash
 				if (![[NSWorkspace sharedWorkspace] performFileOperation:NSWorkspaceRecycleOperation source:srcDir destination:@"/" files:fileArray tag:&tag])
-					SysBeep(1);
+                    AudioServicesPlayAlertSound(kSystemSoundID_UserPreferredAlert);
 			} else
 				[mgr removeFileAtPath:path handler:nil];	// Delete it
 		} // if

@@ -29,7 +29,7 @@
 		offset.width  = [event locationInWindow].x;
  		[self dragImage:thumb at:r.origin offset:offset event:event pasteboard:pboard source:self slideBack:YES];
 	} else
-		SysBeep(1);
+        AudioServicesPlayAlertSound(kSystemSoundID_UserPreferredAlert);
 } // mouseDown:
 #endif
 // -----

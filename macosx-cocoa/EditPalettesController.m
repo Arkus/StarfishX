@@ -179,7 +179,7 @@
 			NSDictionary		*dict = [NSDictionary dictionaryWithObjectsAndKeys:newName, @"name", theColors, @"colors", nil];
 			[_paletteList replaceObjectAtIndex:rowIndex withObject:dict];
 		} else if (existingIdx != rowIndex)		// Don't beep if we didn't change the name of an existing item
-			SysBeep(1);
+            AudioServicesPlayAlertSound(kSystemSoundID_UserPreferredAlert);
 	} // if
 } // tableView:setObjectValue:forTableColumn:row:
 

@@ -964,7 +964,7 @@ static void			SystemPowerNotificationCallback(void *x, io_service_t y, natural_t
 // -----
 
 - (void) loadScreenList
-{
+{ /* //FIXME
 	NSMutableArray	*tempList = [NSMutableArray arrayWithCapacity:1];
 	GDHandle		gd = nil;
 
@@ -993,7 +993,7 @@ static void			SystemPowerNotificationCallback(void *x, io_service_t y, natural_t
 	} // while
 
 	_screenList = [[NSArray arrayWithArray:tempList] retain];
-//	NSLog(@"_screenList = %@", _screenList);
+*/ //	NSLog(@"_screenList = %@", _screenList);
 } // loadScreenList
 
 @end

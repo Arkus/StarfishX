@@ -83,7 +83,7 @@
 	if (validated)
 		[NSApp stopModal];
 	else
-		SysBeep(1);
+        AudioServicesPlayAlertSound(kSystemSoundID_UserPreferredAlert);
 } // done:
 
 // -----
